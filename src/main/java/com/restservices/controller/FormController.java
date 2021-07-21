@@ -13,8 +13,7 @@ import com.restservices.controller.entities.User;
 public class FormController {
 
 	@PostMapping(path = "/submit" , consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.APPLICATION_JSON_VALUE)
-	public User submitForm(@RequestBody User user) throws InterruptedException {
-		Thread.sleep(2000);
+	public User submitForm(@RequestBody User user) {
 		System.out.println(user);
 		return user ;
 	}
